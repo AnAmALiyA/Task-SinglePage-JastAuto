@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>JustAuto</title>
+
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/User.css" rel="stylesheet">
+    <link href="css/popUpStyle.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+
+    <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+
+    <script src="js/popUpScript.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-6 col-md-10 col-sm-12" id='emblema'>
+                    <div class="col-xs-12">
+                        <div class="col-lg-1"></div>
+                        <div class="col-md-1"></div>
+                        <div class="col-sm-1"></div>
+                        <div class="col-xs-6 wapper_header">
+                            <img src="images/почему-у-нас-покупают.png" alt="почему у нас покупают" />
+                        </div>
+                    </div>
+                    <div class="col-xs-1"><img src="images/1.png" /><p>Перезвоним<br />за 5 минут</p></div>
+                    <div class="col-xs-1">
+                        <img src="images/2.png" /><p>Бесплатная<br />консультация</p>
+                        <a class="show_popup" rel="get_consult" href="#">
+                            <div class="btn btn1">
+                                Получить<br />консультацию
+                            </div>
+                        </a>
+
+                        <div class="popup get_consult">
+                            <a class="close" href="#">XX</a>
+                            <h2>Получить консультацию<br /> за 5 минут</h2>
+
+                            <form id="form_get_consult" method="post" action="" onsubmit="send_form_get_consult();">
+                                <input type="text" name="city" required placeholder="Введите ваш город" /><br />
+                                <input type="text" name="phone" class="phone" required
+                                       placeholder="Введите телефон"
+                                       pattern='[\+]\d{2}[\(]\d{3}[\)]\d{3}[\-]\d{4}'
+                                       title='Телефон по Украине (Формат: +38(099)999-9999)' /><br />
+                                <input type="submit" value="Получить&#10 консультацию" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xs-1"><img src="images/3.png" /><p>Мы прямые<br />поставщики</p></div>
+                    <div class="col-xs-1"><img src="images/4.png" /><p>Оформляем и<br />отправляем<br />заказ за 1 час</p></div>
+                    <div class="col-xs-1"><img src="images/5.png" /><p>По всей<br />Украине</p></div>
+                    <div class="col-xs-1"><img src="images/6.png" /><p>Оплачивайте<br />любым<br />способом</p></div>
+                    <div class="col-xs-12 logotip">
+                        <a href="#" class="show_popup" rel="get_delivery"><div><img src="images/companyslogo1.jpg" alt=""></div></a>
+                        <a href="#" class="show_popup" rel="get_delivery"><div><img src="images/companyslogo2.png" alt=""></div></a>
+                        <a href="#" class="show_popup" rel="get_delivery"><div><img src="images/companyslogo1.jpg" alt=""></div></a>
+                        <a href="#" class="show_popup" rel="get_delivery"><div><img src="images/companyslogo2.png" alt=""></div></a>
+                        <a href="#" class="show_popup" rel="get_delivery"><div><img src="images/companyslogo1.jpg" alt=""></div></a>
+                    </div>
+                    <div class="popup get_delivery">
+                        <a class="close" href="#">XX</a>
+                        <h2>Получите доставку<br /> БЕСПЛАТНО</h2>
+
+                        <form id="form_get_delivery" method="post" action="" onsubmit="send_form_get_delivery();">
+                            <input type="text" name="city" required placeholder="Введите ваш город" /><br />
+                            <input type="text" name="phone" class="phone" required 
+                                   placeholder="Введите телефон"
+                                   pattern='[\+]\d{2}[\(]\d{3}[\)]\d{3}[\-]\d{4}' 
+                                   title='Телефон по Украине (Формат: +38(099)999-9999)' /><br />
+                            <input type="submit" value="Получите&#10 доставку" />
+                        </form>
+
+                        <p>*Бесплатная доставка только<br />при 100% предоплате</p>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-1"></div>
+            </div>
+        </header>
+        <div>
+            <div class="row wrapper_footer">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-6 col-md-10 col-sm-12">
+                    <div class="col-xs-12">
+                        <div class="col-xs-3"></div>
+                        <div class="col-xs-6">
+                            <div class="footer_img"><img src="images/free_consultation.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="col-md-6 footer_img_list">
+                            <img src="images/list.png" alt="">
+                        </div>
+                        <div class="col-xs-6">
+                            <div class="menu_menager">
+                                <div class="menager"><img src="images/menager.png" alt=""></div>
+                                <h3><b>Консультация<br />за 5 минут</b></h3>
+                                <form id="consult" method="post" action="" onsubmit="send_form_consult();">
+                                    <input type="text" name="phone" class="phone" required 
+                                           placeholder="Введите телефон" 
+                                           pattern='[\+]\d{2}[\(]\d{3}[\)]\d{3}[\-]\d{4}' 
+                                           title='Телефон по Украине (Формат: +38(099)999-9999)' />
+                                    <input type="submit" value="Получить&#10 консультацию" />
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-1"></div>
+                <div class="col-xs-12 container_slider">
+                    <div id="jssor_1" class="jssor_1">
+                        <div data-u="loading" class="loading">
+                            <div class="loading_opacityF"></div>
+                            <div class="loading_opacityL"></div>
+                        </div>
+                        <div id="skdfjghkfj" class="slides" data-u="slides">
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/9.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/8.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/7.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/6.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/5.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/4.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/3.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/24.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/23.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/22.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/21.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/20.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/2.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/19.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/18.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/17.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/16.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/15.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/14.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/13.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/12.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/11.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/10.png" />
+                            </div>
+                            <div style="display: none;">
+                                <img data-u="image" src="images/carslogo/1.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/User.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
